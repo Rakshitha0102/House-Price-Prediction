@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 app = Flask(__name__)
-model = joblib.load('F:/all_projects/projects/House_price/Housing_price_model.pkl')
+model = joblib.load('Housing_price_model.pkl')
 
 @app.route('/')
 def home():
