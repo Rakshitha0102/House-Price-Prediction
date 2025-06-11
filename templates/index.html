@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🏠 House Price Predictor</h1>
+        <form action="/predict" method="post">
+            <input type="number" step="any" name="crim" placeholder="Crime Rate (crim)" required>
+            <input type="number" step="any" name="zn" placeholder="Residential Land Zone (zn)" required>
+            <input type="number" step="any" name="indus" placeholder="Non-Retail Business (indus)" required>
+            <input type="number" step="any" name="chas" placeholder="Charles River Dummy (chas)" required>
+            <input type="number" step="any" name="nox" placeholder="Nitric Oxide (nox)" required>
+            <input type="number" step="any" name="rm" placeholder="Average Rooms (rm)" required>
+            <input type="number" step="any" name="age" placeholder="House Age (%) (age)" required>
+            <input type="number" step="any" name="dis" placeholder="Distance to Employment (dis)" required>
+            <input type="number" step="any" name="rad" placeholder="Accessibility to Highways (rad)" required>
+            <input type="number" step="any" name="tax" placeholder="Property Tax Rate (tax)" required>
+            <input type="number" step="any" name="ptratio" placeholder="Pupil-Teacher Ratio (ptratio)" required>
+            <input type="number" step="any" name="b" placeholder="Black Population (b)" required>
+            <input type="number" step="any" name="lstat" placeholder="Lower Status Population (%) (lstat)" required>
+            <button type="submit">Predict</button>
+        </form>
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
